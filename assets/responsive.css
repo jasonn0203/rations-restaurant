@@ -1,0 +1,22 @@
+@media (max-width: 46.1875em){
+    /* 46.1875em = 739px */
+    html{
+        max-width: fit-content;
+
+    }
+
+}
+
+/* Tablet responsive */
+@media (min-width: 46.25em) and (max-width: 63.9375em){
+    /*  740px = 46.25em
+        1023px = 63.9375em */
+    html{
+        max-width: 1440px;
+    }
+
+    .header__nav ul li a,
+    .header__action,.header__action button{
+        font-size: 24px;
+    }
+}

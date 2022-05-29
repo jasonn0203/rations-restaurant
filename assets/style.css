@@ -1,0 +1,601 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #FE5000;
+    --text-desc-color: #695D57;
+}
+
+
+html{
+    scroll-behavior: smooth;
+    width: fit-content;
+    
+}
+body{
+    height: 100%;
+    font-family: 'Poppins';
+}
+
+/* ----------HEADER---------*/
+
+#page__header{
+    height: 102px;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.header__logo{
+    cursor: pointer;
+}
+
+.header__nav{
+    display: flex;
+}
+
+.header__nav ul{
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    list-style: none;
+    
+    
+}
+.header__nav ul li a{
+    margin-left: 40px;
+    color: var(--text-desc-color);
+    position: relative;
+    cursor: pointer;
+    transition: all .2s ease;
+    text-decoration: none;
+    
+}
+.header__nav ul li a:hover,
+.header__action p:hover{
+    color: var(--main-color);
+}
+.header__nav ul li a:hover:before ,
+.header__action p:hover:before{
+    
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    background: var(--main-color);
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    left:calc(50%);
+
+}
+
+
+
+.header__action{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header__action p{
+    color: var(--text-desc-color);
+    margin-right: 28px;
+    position: relative;
+    transition: all .2s ease;
+
+}
+
+.header__action button{
+    padding: 9px 18px;
+    background: var(--main-color);
+    color: white;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    transition: opacity .3s ease-in;
+    transition: transform .2s ease;
+    cursor: pointer;
+
+}
+
+.header__action button:hover,
+.page__welcome-content button:hover,
+#page__restaurant-menu button:hover{
+    opacity: 0.9;
+    transform: scale(0.9);
+}
+
+/* --------Content--------- */
+#page__content{
+
+}
+
+.page__welcome{
+    height: 702px;
+    background-color: #1F0A00;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.page__welcome-content{
+    color: #fff;
+    max-width: 404px;
+}
+.page__welcome-content h2{
+    font-size: 70px;
+}
+
+.page__welcome-content p{
+    font-weight: 400;
+    font-size: 18px;
+    color: #D3CBC6;
+    margin-top: 22px;
+    margin-bottom: 40px;
+}
+
+.page__welcome-content button{
+    padding: 16px 28px;
+    background: var(--main-color);
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    transition: opacity .3s ease-in;
+    transition: transform .2s ease;
+    cursor: pointer;
+}
+
+.page__welcome-image{
+    display: inline-block;
+    position: relative;
+}
+
+.page__welcome-card{
+    position: absolute;
+    width: 260px;
+    height: 135px;
+    padding: 22px 16px;
+    background: rgba(255, 255, 255, 0.4);
+    left: -28px;
+    top: 371px;
+    backdrop-filter: blur(20px);
+    border-radius: 8px;
+    color: #fff;
+    
+}
+
+.welcome-card-info{
+    font-weight: 600;
+    font-size: 18px;
+    font-style: normal;
+    
+}
+
+.welcome-card-rating{
+    display: flex;
+    font-weight: 500;
+    margin: 12px 0;
+}
+.welcome-card-rating img{
+    margin-right: 7px;
+}
+
+.welcome-card-review-img{
+
+}
+
+.page__welcome-scoll{
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;
+    border: 2px solid #695D57;
+    position: absolute;
+    align-items: center;
+    left: 200px;
+    bottom: 100px;
+    cursor: pointer;
+}
+
+.page__welcome-scoll>img{
+    position: absolute;
+    left: 18px;
+    top: 12px;
+}
+
+.page__welcome-scoll:hover{
+    background: rgba(255, 255, 255, 0.4);
+    opacity: 1.5;
+}
+
+/*-- RESTAURANT BASIC DATA -- */
+#page__restaurant-info{
+    height: 800px;
+}
+
+.page_restaurant-data{    
+    padding: 0 135px;
+    margin: 80px 0;
+    display: flex;
+    /* align-items: center; */
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-desc-color);
+    justify-content: space-evenly;
+}
+.page_restaurant-data h2{
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 14px;
+    color: #000;
+}
+
+/* Restaurant Service */
+.restaurant-service{
+    
+}
+.restaurant__service-title,
+.restaurant-menu-title{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.restaurant__service-title h2,
+.restaurant-menu-title h2{
+    font-weight: 600;
+    font-size: 40px;    
+    margin-bottom: 18px;
+}
+.restaurant__service-title p,
+.restaurant-menu-title p{
+    color: var(--text-desc-color);
+    max-width: 400px;
+}
+
+.restaurant__service-list{
+    padding: 0 135px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card__service{
+    max-width: 320px;
+    height: 300px;
+    background: #F6F6F6;
+    border-radius: 6px;
+    text-align: center;
+    padding: 22px;
+    color: #000;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.restaurant__service-list img{
+    max-width: 110px;
+    max-height: 110px;
+    
+}
+
+.restaurant__service-list h3{
+    margin-bottom: 30px;
+}
+
+.restaurant__service-list p{
+    font-weight: 400;
+    color : var(--text-desc-color);
+}
+
+.card__service:hover{
+    background: var(--main-color);
+    color: #fff;
+    
+}
+.card__service:hover p{
+    color:  #fff;
+}
+
+/* Restaurant menu */
+
+#page__restaurant-menu{
+    height: auto;
+    background: #FFFAF8;
+}
+.restaurant-menu-title h2{
+    margin-top: 80px;
+}
+.restaurant-menu-list{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 135px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.card-menu{   
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 1px 1px 20px #888888;
+    
+}
+.card-menu-info{
+    margin: 15px 0;
+    padding: 12px;
+}
+.card-menu-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+.card-menu-footer p{
+    font-weight: bold;
+}
+.card-menu-footer button{
+    padding: 8px 14px;
+    background: #fff;
+    outline: none;
+    border: 2px solid #D6CBC6;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.card-menu-footer button:hover{
+    background: var(--main-color);
+    color: #fff;
+    border: 2px solid var(--main-color);
+    
+
+}
+.card-menu img{
+    transform: scale(0.9);
+    transition: all .2s;
+    
+}
+.card-menu img:hover{
+    transform: scale(1);
+}
+
+#page__restaurant-menu .menu__footer-button button{
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 28px;
+    background: var(--main-color);
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    transition: opacity .3s ease-in;
+    transition: transform .2s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+ /* Client Review   */
+
+#restaurant__client-review{
+    height: 850px;
+    
+}
+
+.client-review-box{
+    display: flex;
+    justify-content: space-between;
+    padding: 164px;
+    align-items: center;
+
+}
+
+.client-image{
+    width: 470px;
+    height: 504px;
+}
+.client-message-decoration{
+    height: 4px;
+    width: 40px;
+    margin-top: 100px;
+    margin-bottom: 12px;
+    border-radius: 2px;
+    background: var(--main-color);
+}
+
+.client-message{
+    align-items: center;
+    max-width: 380px;
+    margin-right: 80px;
+}
+
+.client-message h2{
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.client-message p{
+    font-weight: 400;
+    font-size: 16px;
+    margin: 40px 0;
+    font-style: italic;
+    color: var(--text-desc-color);
+}
+.client-switch-button{
+    margin-top: 30px;
+}
+.client-switch-button  .switch-btn{
+    padding: 18px 17px;
+    border-radius: 6px;
+    border:  none;
+    cursor: pointer;
+}
+
+.client-switch-button  .switch-btn1{
+    background: #FFFAF8;
+    margin-right: 20px;
+}
+
+.client-switch-button .switch-btn2{
+    background:  var(--main-color);
+}
+
+.client-switch-button  .switch-btn:hover{
+    opacity: 0.8;
+}
+
+ /* FOOTER  */
+#page__footer{
+    background: #1F0A00;
+    padding: 164px;
+    height: auto;
+    
+}
+
+.footer__question{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.footer__question h2{
+    font-weight: 600;
+    font-size: 40px;
+    max-width: 400px;
+}
+
+.footer__button{
+    margin-right: 200px; 
+
+}
+
+.footer__button .footer_btn{
+    padding: 13px 40px;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.footer__button .footer_btn1{
+    background: #1F0A00;
+    border: 1px solid #fff;
+
+
+}
+.footer__button .footer_btn2{
+    background: #1F0A00;
+    border: 1px solid #fff;
+    margin-left: 24px;
+}
+.footer__button .footer_btn:hover{
+    background: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+.footer__info{
+    margin: 100px 0;
+    display: flex;
+    line-height: 2;
+    justify-content: space-between;
+
+}
+.footer__restaurant-slogan{
+    color: #D3CBC6;
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.footer__restaurant-slogan p{
+    max-width: 242px;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 14px;
+    
+    
+}
+
+.footer__nav-list{
+    display: flex;
+    color: white;
+    margin-left: 150px;
+    
+}
+.footer__nav{
+    flex-basis: 25%;;
+    color: #D3CBC6;
+}
+
+.footer__nav{
+    min-width: 150px;
+    margin-right: 120px;
+
+}
+.footer__nav .footer__nav-contact{
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+.footer__nav-contact .contact-info{
+
+}
+.footer__nav ul li{
+    font-weight: 400;
+    font-size: 16px;
+    list-style-type: none;
+    align-items: center;
+    
+    
+}
+.footer__nav ul li a{
+    text-decoration: none;
+    color: #D3CBC6;
+    transition: all .3s ease;
+}
+.footer__nav ul li img{
+    margin-right: 10px;
+}
+.footer__nav ul li a:hover{
+    color: white;
+    opacity: 1.5;
+}
+
+.footer__copyright{
+    border-top: 2px solid #4D3124;
+    align-items: center;
+    display: flex;
+}
+.copyright__message{
+    justify-content: center;
+    margin-top: 100px;
+    flex: 1;
+    color: var(--text-desc-color);
+    text-align: center;
+    opacity: 1.2;
+}
+.social-logo{
+    margin-top: 100px;
+    color: #000;
+}
+.social-logo button{
+    padding: 12px 15px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.social-logo button img{
+    max-width: 24px;
+}
+.social-logo button:hover{
+    background: var(--main-color);
+    
+}
